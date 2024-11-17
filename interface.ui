@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Interface</class>
+ <widget class="QMainWindow" name="Interface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1091</width>
+    <height>980</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Basic Image Processing</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="p_frame">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>400</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="q_frame">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>60</y>
+      <width>421</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelThreshold">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>720</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>threshold</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelOrigImg">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>40</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>P</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelProcImg">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>40</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Q</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="thresholdSlider">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>720</y>
+      <width>431</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="thresholdBox">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>710</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="grayscale">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>860</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Grayscale</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="labelling">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>760</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Labelling</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="invert_btn">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>790</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Invert</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openp">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openq">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>30</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="r_frame">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>390</y>
+      <width>421</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelResImg">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>370</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S (output)</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="p_selected_box">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>40</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>selected_p</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="q_selected_box">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>40</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>selected_q</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_res">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>360</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="substraction_btn">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>660</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Substraction</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="autothreshold_btn">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>450</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Autothreshold</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openr">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>360</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="filter_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>800</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>filter</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="filterSlider">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>810</y>
+      <width>431</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="filterBox">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>800</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="preprocess">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>679</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>preprocess:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="notice1">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>760</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>(precondition: binarized)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="notice2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>840</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>(precondition: binarized)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="section2">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>550</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>operations:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="move_btn">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>580</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Move</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="box_K1">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>450</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>50.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="box_K2">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>450</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>5.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelK1">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>430</y>
+      <width>21</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>K1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelK2">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>430</y>
+      <width>21</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>K2</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="box_x">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>580</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>50</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="box_y">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>580</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>50</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_x">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>560</y>
+      <width>21</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_y">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>560</y>
+      <width>21</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="intersection_btn">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>730</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Intersection</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="autothreshold_value_labe">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>500</y>
+      <width>151</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>autothreshold value:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="autothreshold_label">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>500</y>
+      <width>141</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0,0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="preprocess_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>880</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>process:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="proces_a_btn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>920</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Proces A</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="and_label">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>720</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>logic AND</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="not_label">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>790</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>logic NOT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="filter_v2_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>820</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>by surface</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="intensities_label">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>640</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>intensities substraction</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="same_size_label_1">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>660</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>precondition:same size(h,w)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="same_size_label_2">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>730</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>precondition:same size(h,w)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="notice_proces_a">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>920</y>
+      <width>481</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>It substracts P-Q and then autothreshold(P-Q). Select X,Y, K1 and K2</string>
+    </property>
+   </widget>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open..</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as..</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>thresholdSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>thresholdBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>378</x>
+     <y>407</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>631</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>thresholdBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>thresholdSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>631</x>
+     <y>407</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p_selected_box</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>q_selected_box</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>481</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>q_selected_box</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>p_selected_box</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>507</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>filterSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>filterBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>450</x>
+     <y>525</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>578</x>
+     <y>530</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>filterBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>filterSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>595</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>527</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
