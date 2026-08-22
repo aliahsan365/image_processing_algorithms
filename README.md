@@ -49,12 +49,6 @@ qmake image_processing_algorithms.pro
 make
 ```
 
-En Windows con MinGW, el último comando puede ser:
-
-```powershell
-mingw32-make
-```
-
 El ejecutable generado se llama `robots_hands_detection` (`robots_hands_detection.exe` en Windows).
 
 ## Uso
